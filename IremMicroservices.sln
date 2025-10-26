@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IremMicroservices.AppHost", "IremMicroservices.AppHost\IremMicroservices.AppHost.csproj", "{18DE9D6D-ACDB-4DDE-98CC-9E49D3B1A450}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IremMicroservices.ServiceDefaults", "IremMicroservices.ServiceDefaults\IremMicroservices.ServiceDefaults.csproj", "{39FEE2E4-F14E-497E-B21A-A46BE6FC4ED8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CORE", "CORE\CORE.csproj", "{40D550E7-1B3A-4E56-9CE6-9C1E9C285BFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.APP", "Users.APP\Users.APP.csproj", "{8E1391E7-C7CB-448C-9551-A1C916AA8C18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Users.API", "Users.API\Users.API.csproj", "{D027C97D-2D4A-457F-AA23-D987266D0EEF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locations.APP", "Locations.APP\Locations.APP.csproj", "{FDFFFD36-49FA-403A-B337-FEDCD0B139CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locations.API", "Locations.API\Locations.API.csproj", "{DA54E8B3-5E2C-47D1-8C1B-DC9AEA1BFABA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18DE9D6D-ACDB-4DDE-98CC-9E49D3B1A450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18DE9D6D-ACDB-4DDE-98CC-9E49D3B1A450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18DE9D6D-ACDB-4DDE-98CC-9E49D3B1A450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18DE9D6D-ACDB-4DDE-98CC-9E49D3B1A450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39FEE2E4-F14E-497E-B21A-A46BE6FC4ED8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39FEE2E4-F14E-497E-B21A-A46BE6FC4ED8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39FEE2E4-F14E-497E-B21A-A46BE6FC4ED8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39FEE2E4-F14E-497E-B21A-A46BE6FC4ED8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40D550E7-1B3A-4E56-9CE6-9C1E9C285BFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40D550E7-1B3A-4E56-9CE6-9C1E9C285BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40D550E7-1B3A-4E56-9CE6-9C1E9C285BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40D550E7-1B3A-4E56-9CE6-9C1E9C285BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E1391E7-C7CB-448C-9551-A1C916AA8C18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E1391E7-C7CB-448C-9551-A1C916AA8C18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E1391E7-C7CB-448C-9551-A1C916AA8C18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E1391E7-C7CB-448C-9551-A1C916AA8C18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D027C97D-2D4A-457F-AA23-D987266D0EEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D027C97D-2D4A-457F-AA23-D987266D0EEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D027C97D-2D4A-457F-AA23-D987266D0EEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D027C97D-2D4A-457F-AA23-D987266D0EEF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FDFFFD36-49FA-403A-B337-FEDCD0B139CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FDFFFD36-49FA-403A-B337-FEDCD0B139CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FDFFFD36-49FA-403A-B337-FEDCD0B139CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FDFFFD36-49FA-403A-B337-FEDCD0B139CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA54E8B3-5E2C-47D1-8C1B-DC9AEA1BFABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA54E8B3-5E2C-47D1-8C1B-DC9AEA1BFABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA54E8B3-5E2C-47D1-8C1B-DC9AEA1BFABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA54E8B3-5E2C-47D1-8C1B-DC9AEA1BFABA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
