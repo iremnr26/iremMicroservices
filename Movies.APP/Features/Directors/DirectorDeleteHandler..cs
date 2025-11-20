@@ -22,7 +22,7 @@ namespace Movies.APP.Features.Directors
             if (entity is null)
                 return Error("Director not found!");
 
-            // Eğer yönetmenin Filmi varsa silinmesin (hocanın GroupDelete mantığı gibi)
+            // Eğer yönetmenin Filmi varsa silinmesin 
             var hasMovies = Query<Movie>().Any(m => m.DirectorId == entity.Id);
 
             if (hasMovies)

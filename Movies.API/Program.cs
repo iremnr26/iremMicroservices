@@ -5,7 +5,6 @@ using Movies.APP.Domain;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllers();
 
 builder.Services.AddDbContext<MoviesDb>(options =>
@@ -13,11 +12,10 @@ builder.Services.AddDbContext<MoviesDb>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("MoviesDb"));
 });
 
-
-
 // MediatR – Movies.APP assembly’sini tara
 builder.Services.AddMediatR(cfg =>
     cfg.RegisterServicesFromAssembly(typeof(Movie).Assembly));
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
