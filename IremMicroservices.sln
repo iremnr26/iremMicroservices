@@ -14,6 +14,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locations.APP", "Locations.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Locations.API", "Locations.API\Locations.API.csproj", "{DA54E8B3-5E2C-47D1-8C1B-DC9AEA1BFABA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.API", "Movies.API\Movies.API.csproj", "{C315DF0E-C620-41B5-A52B-62DD29B9B50E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Movies.APP", "Movies.APP\Movies.APP.csproj", "{FE59C756-EDF1-424E-AE1B-18711931C4C2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,5 +52,13 @@ Global
 		{DA54E8B3-5E2C-47D1-8C1B-DC9AEA1BFABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA54E8B3-5E2C-47D1-8C1B-DC9AEA1BFABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA54E8B3-5E2C-47D1-8C1B-DC9AEA1BFABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C315DF0E-C620-41B5-A52B-62DD29B9B50E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C315DF0E-C620-41B5-A52B-62DD29B9B50E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C315DF0E-C620-41B5-A52B-62DD29B9B50E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C315DF0E-C620-41B5-A52B-62DD29B9B50E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE59C756-EDF1-424E-AE1B-18711931C4C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE59C756-EDF1-424E-AE1B-18711931C4C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE59C756-EDF1-424E-AE1B-18711931C4C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE59C756-EDF1-424E-AE1B-18711931C4C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
