@@ -9,7 +9,7 @@ namespace Movies.APP.Domain
         {
             var optionsBuilder = new DbContextOptionsBuilder<MoviesDb>();
 
-            // SQLite Connection (hocanın projesiyle aynı mantık)
+            // SQLite Connection 
             optionsBuilder.UseSqlite("Data Source=MoviesDB.db");
 
             return new MoviesDb(optionsBuilder.Options);
