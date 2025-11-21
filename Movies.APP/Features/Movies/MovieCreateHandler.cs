@@ -15,6 +15,9 @@ namespace Movies.APP.Features.Movies
         public DateTime? ReleaseDate { get; set; }
         public decimal TotalRevenue { get; set; }
         public int DirectorId { get; set; }
+        
+        public List<int> GenreIds { get; set; } = new();  // <-- EKLENDİ
+
     }
 
     public class MovieCreateHandler 
@@ -35,6 +38,18 @@ namespace Movies.APP.Features.Movies
                 DirectorId = request.DirectorId
             };
 
+            if (request.GenreIds != null && request.GenreIds.Any())
+            {
+                // Add genre relations
+                foreach (var genreId in request.GenreIds)
+                {
+                    entity.MovieGenres.Add(new MovieGenre
+                    {
+                        GenreId = genreId
+                    });
+                }
+            }
+            
             await Create(entity, cancellationToken);
 
             return Success("Movie created successfully.", entity.Id);

@@ -14,6 +14,7 @@ namespace Movies.APP.Domain
         public DbSet<Genre> Genres { get; set; }
         public DbSet<MovieGenre> MovieGenres { get; set; }
 
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             SeedGenres(modelBuilder);
@@ -44,6 +45,7 @@ namespace Movies.APP.Domain
             // RELATIONSHIPS
             // -------------------------
 
+            
             // Movie -> Director (1 Director, many Movies)
             modelBuilder.Entity<Movie>()
                 .HasOne(m => m.Director)

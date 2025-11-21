@@ -11,6 +11,8 @@ namespace CORE.APP.Services
     /// <typeparam name="TEntity">
     /// Üzerinde çalışılacak entity tipi. CORE.APP.Domain.Entity’den türemeli ve parametresiz ctor’a sahip olmalı.
     /// </typeparam>
+    
+    /// Burada sadece miras alabilirsin
     public abstract class Service<TEntity> : ServiceBase, IDisposable where TEntity : Entity, new()
     {
         /// <summary>
@@ -98,7 +100,8 @@ namespace CORE.APP.Services
         /// Asenkron Create. Kaydı ekler ve save=true ise SaveChangesAsync çağırır.
         /// </summary>
         protected async Task Create(TEntity entity, CancellationToken cancellationToken, bool save = true)
-        {
+        {   
+
             entity.Guid = Guid.NewGuid().ToString();   // Yeni kayıt için benzersiz Guid
             _db.Set<TEntity>().Add(entity);
             if (save)
