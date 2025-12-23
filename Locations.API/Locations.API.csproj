@@ -18,6 +18,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Locations.APP\Locations.APP.csproj" />
+      <ProjectReference Include="..\IremMicroservices.ServiceDefaults\IremMicroservices.ServiceDefaults.csproj" />
     </ItemGroup>
 
 </Project>

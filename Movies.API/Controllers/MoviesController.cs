@@ -78,7 +78,7 @@ namespace Movies.API.Controllers
                     // Send create request
                     var response = await _mediator.Send(request);
 
-                    if (response.IsSuccesful)
+                    if (response.IsSuccessful)
                         return Ok(response);
 
                     ModelState.AddModelError("MoviesPost", response.Message);
@@ -108,7 +108,7 @@ namespace Movies.API.Controllers
                 {
                     var response = await _mediator.Send(request);
 
-                    if (response.IsSuccesful)
+                    if (response.IsSuccessful)
                         return Ok(response);
 
                     ModelState.AddModelError("MoviesPut", response.Message);
@@ -137,7 +137,7 @@ namespace Movies.API.Controllers
                 // Send delete request
                 var response = await _mediator.Send(new MovieDeleteRequest { Id = id });
 
-                if (response.IsSuccesful)
+                if (response.IsSuccessful)
                     return Ok(response);
 
                 ModelState.AddModelError("MoviesDelete", response.Message);

@@ -7,6 +7,9 @@ using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add Aspire service defaults
+builder.AddServiceDefaults();
+
 // Add services to the container.
 // Add services to the IoC Container.
 // DbContext:
@@ -103,5 +106,8 @@ app.MapControllers();
 
 // CORS:
 app.UseCors();
+
+// Map Aspire default endpoints (health checks)
+app.MapDefaultEndpoints();
 
 app.Run();

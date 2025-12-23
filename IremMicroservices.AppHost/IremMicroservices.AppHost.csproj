@@ -20,4 +20,10 @@
         <PackageReference Include="System.Data.SQLite.Core" Version="1.0.118" />
     </ItemGroup>
 
+    <ItemGroup>
+        <ProjectReference Include="..\Locations.API\Locations.API.csproj" />
+        <ProjectReference Include="..\Movies.API\Movies.API.csproj" />
+        <ProjectReference Include="..\Users.API\Users.API.csproj" />
+    </ItemGroup>
+
 </Project>

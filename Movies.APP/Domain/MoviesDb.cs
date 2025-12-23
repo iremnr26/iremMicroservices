@@ -35,7 +35,7 @@ namespace Movies.APP.Domain
                 .HasIndex(g => g.Name)
                 .IsUnique();
 
-            // Yönetmen adı + soyadı benzersiz olmalı (Mantıklı bir constraint)
+            // Yönetmen adı + soyadı benzersiz olmalı 
             modelBuilder.Entity<Director>()
                 .HasIndex(d => new { d.FirstName, d.LastName })
                 .IsUnique();

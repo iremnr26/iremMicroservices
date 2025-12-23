@@ -15,6 +15,8 @@ namespace Movies.APP.Features.Movies
         public DateTime? ReleaseDate { get; set; }
         public decimal TotalRevenue { get; set; }
         public int DirectorId { get; set; }
+        public List<int> GenreIds { get; set; } = new();  // <-- EKLENDİ
+
     }
 
     public class MovieUpdateHandler 
@@ -33,11 +35,26 @@ namespace Movies.APP.Features.Movies
             if (entity is null)
                 return Error("Movie not found!");
 
+            Delete(entity.MovieGenres);
+
             entity.Name = request.Name.Trim();
             entity.ReleaseDate = request.ReleaseDate;
             entity.TotalRevenue = request.TotalRevenue;
             entity.DirectorId = request.DirectorId;
-
+            
+            //böyle yapma tek satır yap 
+            if (request.GenreIds != null && request.GenreIds.Any())
+            {
+                // Add genre relations
+                foreach (var genreId in request.GenreIds)
+                {
+                    entity.MovieGenres.Add(new MovieGenre
+                    {
+                        GenreId = genreId
+                    });
+                }
+            }
+            
             await Update(entity, cancellationToken);
 
             return Success("Movie updated successfully.", entity.Id);

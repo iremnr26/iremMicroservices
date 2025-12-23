@@ -79,7 +79,7 @@ namespace Movies.API.Controllers
                 {
                     var response = await _mediator.Send(request);
 
-                    if (response.IsSuccesful)
+                    if (response.IsSuccessful)
                         return Ok(response);
 
                     ModelState.AddModelError("DirectorsPost", response.Message);
@@ -106,7 +106,7 @@ namespace Movies.API.Controllers
                 {
                     var response = await _mediator.Send(request);
 
-                    if (response.IsSuccesful)
+                    if (response.IsSuccessful)
                         return Ok(response);
 
                     ModelState.AddModelError("DirectorsPut", response.Message);
@@ -131,7 +131,7 @@ namespace Movies.API.Controllers
             {
                 var response = await _mediator.Send(new DirectorDeleteRequest { Id = id });
 
-                if (response.IsSuccesful)
+                if (response.IsSuccessful)
                     return Ok(response);
 
                 ModelState.AddModelError("DirectorsDelete", response.Message);

@@ -21,12 +21,8 @@ namespace Movies.APP.Features.Genres
 
             if (entity is null)
                 return Error("Genre not found!");
-
-            // Bu genre mevcut filmlerde kullanılıyorsa silinemez
-            var hasMovies = Query<MovieGenre>().Any(mg => mg.GenreId == entity.Id);
-            if (hasMovies)
-                return Error("You cannot delete this genre because movies are using it!");
-
+            
+            Delete(entity.MovieGenres);
             Delete(entity);
 
             return Success("Genre deleted successfully.", entity.Id);
