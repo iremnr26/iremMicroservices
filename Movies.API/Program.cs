@@ -4,6 +4,9 @@ using Movies.APP.Domain;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add Aspire service defaults
+builder.AddServiceDefaults();
+
 // Add services to the container.
 builder.Services.AddControllers();
 
@@ -34,5 +37,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Map Aspire default endpoints (health checks)
+app.MapDefaultEndpoints();
 
 app.Run();

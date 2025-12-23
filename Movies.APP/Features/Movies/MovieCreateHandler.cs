@@ -38,6 +38,7 @@ namespace Movies.APP.Features.Movies
                 DirectorId = request.DirectorId
             };
 
+            //böyle yapma tek satır yap 
             if (request.GenreIds != null && request.GenreIds.Any())
             {
                 // Add genre relations

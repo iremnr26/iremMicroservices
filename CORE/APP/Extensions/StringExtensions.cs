@@ -1,21 +1,45 @@
-namespace CORE.APP.Extensions
+﻿namespace CORE.APP.Extensions
 {
-    // String için yardımcı metotlar
+    /// <summary>
+    /// Provides extension methods for string validation and default value handling.
+    /// </summary>
     public static class StringExtensions
     {
-        // Eğer değer boş/null/whitespace ise defaultValue döndürür, değilse kendisini döndürür
+        /// <summary>
+        /// Returns the specified <paramref name="defaultValue"/> if the string is null, empty, or consists only of white-space characters; otherwise, returns the original string.
+        /// Can be used instead of string.IsNullOrWhiteSpace method.
+        /// </summary>
+        /// <param name="value">The string to check.</param>
+        /// <param name="defaultValue">The value to return if <paramref name="value"/> is null, empty, or white-space.</param>
+        /// <returns>
+        /// <paramref name="defaultValue"/> if <paramref name="value"/> is null, empty, or white-space; otherwise, <paramref name="value"/>.
+        /// </returns>
         public static string HasNotAny(this string value, string defaultValue)
         {
             return HasNotAny(value) ? defaultValue : value;
         }
 
-        // Değer boş, null veya sadece boşluklardan mı oluşuyor?
+        /// <summary>
+        /// Determines whether the string is null, empty, or consists only of white-space characters.
+        /// Can be used instead of string.IsNullOrWhiteSpace method.
+        /// </summary>
+        /// <param name="value">The string to check.</param>
+        /// <returns>
+        /// <c>true</c> if the string is null, empty, or white-space; otherwise, <c>false</c>.
+        /// </returns>
         public static bool HasNotAny(this string value)
         {
             return string.IsNullOrWhiteSpace(value);
         }
 
-        // Değer dolu mu (boş veya null değil mi)?
+        /// <summary>
+        /// Determines whether the string is not null, not empty, and contains at least one non-white-space character.
+        /// Can be used instead of string.IsNullOrWhiteSpace method.
+        /// </summary>
+        /// <param name="value">The string to check.</param>
+        /// <returns>
+        /// <c>true</c> if the string contains at least one non-white-space character; otherwise, <c>false</c>.
+        /// </returns>
         public static bool HasAny(this string value)
         {
             return !HasNotAny(value);

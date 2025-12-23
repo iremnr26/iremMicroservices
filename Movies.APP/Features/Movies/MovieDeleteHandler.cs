@@ -21,6 +21,7 @@ namespace Movies.APP.Features.Movies
             if (entity is null)
                 return Error("Movie not found!");
 
+            Delete(entity.MovieGenres);
             await Delete(entity, cancellationToken);
 
             return Success("Movie deleted successfully.", entity.Id);

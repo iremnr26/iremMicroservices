@@ -19,6 +19,7 @@
     <ItemGroup>
       <ProjectReference Include="..\CORE\CORE.csproj" />
       <ProjectReference Include="..\Movies.APP\Movies.APP.csproj" />
+      <ProjectReference Include="..\IremMicroservices.ServiceDefaults\IremMicroservices.ServiceDefaults.csproj" />
     </ItemGroup>
 
 </Project>

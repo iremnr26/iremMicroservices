@@ -70,7 +70,7 @@ namespace Locations.API.Controllers
                 if (ModelState.IsValid)
                 {
                     var response = await _mediator.Send(request);
-                    if (response.IsSuccesful)
+                    if (response.IsSuccessful)
                         return Ok(response); // başarıyla eklendi
                     ModelState.AddModelError("CountriesPost", response.Message);
                 }
@@ -95,7 +95,7 @@ namespace Locations.API.Controllers
                 if (ModelState.IsValid)
                 {
                     var response = await _mediator.Send(request);
-                    if (response.IsSuccesful)
+                    if (response.IsSuccessful)
                         return Ok(response); // başarıyla güncellendi
                     ModelState.AddModelError("CountriesPut", response.Message);
                 }
@@ -117,7 +117,7 @@ namespace Locations.API.Controllers
             try
             {
                 var response = await _mediator.Send(new CountryDeleteRequest() { Id = id });
-                if (response.IsSuccesful)
+                if (response.IsSuccessful)
                     return Ok(response); // başarıyla silindi
 
                 ModelState.AddModelError("CountriesDelete", response.Message);
